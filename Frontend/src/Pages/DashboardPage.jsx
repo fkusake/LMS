@@ -15,13 +15,13 @@ export default function Dashboard() {
       try {
         if (userData?.userRole === "instructor") {
           const result = await axios.get(
-            "http://localhost:3000/api/courses/instructorcourses",
+            "https://lms-w4dk.onrender.com/api/courses/instructorcourses",
             { headers: { authorization: `Bearer ${token}` } }
           );
           setCourses(result.data.result);
         } else {
           const result = await axios.get(
-            "http://localhost:3000/api/courses/studentcourses",
+            "https://lms-w4dk.onrender.com/api/courses/studentcourses",
             { headers: { authorization: `Bearer ${token}` } }
           );
           setCourses(result.data.result);

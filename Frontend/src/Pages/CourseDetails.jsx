@@ -17,7 +17,7 @@ function CourseDetails() {
     const fetchData = async () => {
       try {
         const result = await axios.get(
-          `http://localhost:3000/api/courses/${id}`
+          `https://lms-w4dk.onrender.com/api/courses/${id}`
         );
         setCourse(result.data.result);
         setEnrolledUsers(result.data.result.enrolledUsers);
@@ -164,7 +164,7 @@ function CourseDetails() {
                   onContextMenu={(e) => e.preventDefault()}
                   controlsList="nodownload"
                 >
-                  <source src="http://localhost:3000/public/lesson.mp4" type="video/mp4" />
+                  <source src="https://lms-w4dk.onrender.com/public/lesson.mp4" type="video/mp4" />
                   Your browser does not support video playback.
                 </video>
               </div>

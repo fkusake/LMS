@@ -24,11 +24,11 @@ export default function AddCourse() {
       try {
         if (searchParams.get("courseId")) {
           const result = await axios.get(
-            `http://localhost:3000/api/courses/${searchParams.get("courseId")}`
+            `https://lms-w4dk.onrender.com/api/courses/${searchParams.get("courseId")}`
           );
           setCourse(result.data.result);
         }
-        const res = await axios.get("http://localhost:3000/api/category");
+        const res = await axios.get("https://lms-w4dk.onrender.com/api/category");
         setCategories(res.data.result);
       } catch (error) {
         console.log(error);
@@ -85,7 +85,7 @@ export default function AddCourse() {
 
     const token = localStorage.getItem("userToken").split('"')[1];
     try {
-      await axios.post("http://localhost:3000/api/courses/addcourse", {
+      await axios.post("https://lms-w4dk.onrender.com/api/courses/addcourse", {
         newCourse,
       }, { headers: { authorization: `Bearer ${token}` } });
       navigate("/courses");

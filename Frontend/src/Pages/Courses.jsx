@@ -23,9 +23,9 @@ export default function Courses() {
       try {
         const [coursesRes, categoriesRes] = await Promise.all([
           axios.get(
-            `http://localhost:3000/api/courses?category=${category}&level=${level}&minPrice=${minPrice}&maxPrice=${maxPrice}`
+            `https://lms-w4dk.onrender.com/api/courses?category=${category}&level=${level}&minPrice=${minPrice}&maxPrice=${maxPrice}`
           ),
-          axios.get("http://localhost:3000/api/category"),
+          axios.get("https://lms-w4dk.onrender.com/api/category"),
         ]);
         setCourses(coursesRes.data.result);
         setCategories(categoriesRes.data.result);

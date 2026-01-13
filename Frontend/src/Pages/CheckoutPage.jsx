@@ -21,7 +21,7 @@ export default function CheckoutPage() {
   useEffect(() => {
     async function initiateIntent() {
       const res = await axios.post(
-        "http://localhost:3000/api/payments/create-payment-intent",
+        "https://lms-w4dk.onrender.com/api/payments/create-payment-intent",
         { amount }
       );
       setClientSecret(res.data.clientSecret);

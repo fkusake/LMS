@@ -11,7 +11,7 @@ export default function FeaturedCourses() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const result = await axios.get("http://localhost:3000/api/courses");
+        const result = await axios.get("https://lms-w4dk.onrender.com/api/courses");
         setCourses(result.data.result);
       } catch (error) {
         console.log(error);

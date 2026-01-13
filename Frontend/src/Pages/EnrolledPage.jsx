@@ -14,7 +14,7 @@ export default function EnrolledSuccess() {
       try {
         const token = localStorage.getItem("userToken").split('"')[1];
         const result = await axios.post(
-          `http://localhost:3000/api/courses/enroll/${id}`,
+          `https://lms-w4dk.onrender.com/api/courses/enroll/${id}`,
           {},
           { headers: { authorization: `Bearer ${token}` } }
         );

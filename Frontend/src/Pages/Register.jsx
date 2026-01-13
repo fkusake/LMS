@@ -27,7 +27,7 @@ function Register() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/users/signup",
+        "https://lms-w4dk.onrender.com/api/users/signup",
         {
           name:formData.name,
           email:formData.email,
